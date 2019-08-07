@@ -62,7 +62,8 @@
         "post-install-cmd": [
             "Illuminate\\Foundation\\ComposerScripts::postInstall",
             "@php artisan optimize",
-            "@php artisan passport:keys"
+            "@php artisan passport:keys",
+            "chmod -R 777 public/"
         ]
     }
 }
