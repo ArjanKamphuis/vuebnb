@@ -2,8 +2,6 @@
 
 use Illuminate\Support\Str;
 
-$DATABASE_URL=parse_url(HEROKU_POSTGRESQL_OLIVE_URL);
-
 return [
 
     /*
@@ -83,11 +81,11 @@ return [
 
         'pgsql' => [
             'driver' => 'pgsql',
-            'host' => $DATABASE_URL['host'],
-            'port' => $DATABASE_URL['port'],
-            'database' => ltrim($DATABASE_URL['path'], '/'),
-            'username' => $DATABASE_URL['user'],
-            'password' => $DATABASE_URL['pass'],
+            'host' => 'ec2-54-220-0-91.eu-west-1.compute.amazonaws.com',
+            'port' => '5432',
+            'database' => 'd3o127eceqnl1v',
+            'username' => 'nsjkgmoakjvdqy',
+            'password' => '6129a92c7777d7f951781ac595735a1e89e6438eb0ee4faea5f7a6a435582348',
             'charset' => 'utf8',
             'prefix' => '',
             'prefix_indexes' => true,
